@@ -1,0 +1,85 @@
+.about-me {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+
+    h2 {
+        margin: 10px 0;
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+}
+
+.cards-about {
+    margin: 4em 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    margin: 10px 0;
+    width: 27%;
+    @include full_center;
+    flex-flow: column wrap;
+
+    img {
+        width: 100%;
+        filter: invert(1);
+    }
+
+    p {
+        padding: 10px;
+        text-align: center;
+    }
+
+    @include tn {
+        min-width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 60px;
+        }
+    }
+
+	@include sr {
+        min-width: 190px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 120px;
+        }
+    }
+
+    @include md {
+        min-width: 360px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 120px;
+        }
+    }
+}

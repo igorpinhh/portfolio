@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="src/img/ico2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Igor Pinheiro - Frontend Dev</title>
+    <link rel="stylesheet" href="src/css/app.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+TC" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet" />
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+  </head>
+  <body>
+    <div class="flex_container">
+      <header>
+        <div class="navbar">
+          <a href="#" class="logo"> <span><</span> igor pinheiro <div>/</div> <span>></span> </a>
+          <div id="menu">
+            <img src="src/img/svg-icons/menu.png">
+          </div>
+          <div class="menu-off" id="menupage">
+            <ul>
+              <li class="item__link"><a href="#inicial">home</a></li>
+              <li class="item__link"><a href="#about">about</a></li>
+              <li class="item__link"><a href="#portfolio">portfolio</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section id="inicial">
+        <div class="home">
+          <div class="hello">Olá <div class="color-txt">!!!</div></div>
+          <div class="home-resume">
+            Eu sou Igor Pinheiro.
+          </div>
+          <div class="home-title">
+            <div>Desenvolvedor</div> <span class="color-txt">front end</span> 
+          </div>
+          <div class="home-phrase">
+            Crio landing pages fluidas com layouts <mark class="color-txt">modernos </mark> e
+            <mark class="color-txt"> minimalistas</mark>
+          </div>
+          <div class="main-buttons">
+            <a>
+              <div class="icon">
+                Veja meu trabalho
+              </div>
+            </a>
+
+            <!-- <a>
+              <div class="icon">
+                <img src="src/img/svg-icons/Github.png" />
+              </div>
+            </a>
+            <a>
+              <div class="icon">
+                <img src="src/img/svg-icons/instagram.png" />
+              </div>
+            </a>
+            <a>
+              <div class="icon">
+                <img src="src/img/svg-icons/linkedin.png" />
+              </div>
+            </a> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="about-me" id="about">
+
+        <h2>O que eu faço?</h2>
+
+        <div class="cards-about">
+
+          <div class="card">
+            <img src="src/img/svg-icons/landing-page.png" alt="" />
+            <p>Landing Pages</p>
+          </div>
+
+          <div class="card">
+            <img src="src/img/svg-icons/blogging.png" alt="" />
+            <p>Blogs</p>
+          </div>
+
+          <div class="card">
+            <img src="src/img/svg-icons/one-page.png" alt="" />
+            <p>One Page</p>
+          </div>
+
+          <div class="card">
+            <img src="src/img/svg-icons/ecomerce.png" alt="" />
+            <p>E-commerce</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <h3>Você pode ver meus projetos aqui!</h3>
+
+        <div id="buttons">
+          <button class="btn" id="all" onclick="filterObjects('all')">Todos</button>
+          <button class="btn" id="paginas">Páginas</button>
+          <button class="btn" id="projetos">Projetos</button>
+        </div>
+
+
+        <ul class="objects">
+          <li class="item paginas">
+            <img src="src/img/portfolio/dia05l.jpg" class="media__list_img">
+          </li>
+
+          <li class="item">
+              <img src="src/img/portfolio/dia06l.jpg" class="media__list_img">
+          </li>
+
+          <li class="item paginas">
+              <img src="src/img/portfolio/dia10l.jpg" class="media__list_img">
+          </li>
+
+          <li class="item projetos">
+              <img src="src/img/portfolio/dia11l.jpg" class="media__list_img">
+          </li>
+
+          <li class="item projetos">
+              <img src="src/img/portfolio/dia12l.jpg" class="media__list_img">
+          </li>
+
+          <li class="item paginas">
+              <img src="src/img/portfolio/dia19l.jpg" class="media__list_img">
+          </li>
+
+          <li class="item">
+            <img src="src/img/portfolio/dia20l.jpg" class="media__list_img">
+          </li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+    <script src="src/js/app.js"></script>
+  </body>
+</html>

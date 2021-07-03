@@ -1,0 +1,62 @@
+.portfolio {
+  width: 100%;
+  background: transparent;
+  @include full_center;
+  flex-direction: column;
+
+  h3 {
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 20px auto;
+
+  button {
+    color: $secondaryColor;
+    border: 1px solid $primaryColor;
+    background-color: transparent;
+    text-transform: uppercase;
+    margin: 0 6px;
+    padding: 5px;
+    font-size: 13px;
+  }
+}
+
+.objects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  width: 100%;
+}
+
+.item {
+  display: none;
+}
+
+.show {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+
+  img {
+    width: 100%;
+  }
+
+  @include sr {
+    width: 80%;
+  }
+
+  @include sm {
+    width: 70%;
+  }
+}

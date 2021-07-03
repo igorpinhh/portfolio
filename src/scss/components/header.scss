@@ -1,0 +1,170 @@
+/* font-family: 'Noto Sans TC', sans-serif; */
+
+/* font-family: 'Montserrat', sans-serif; */
+
+header {
+  width: 100%;
+  height: $headerHeight;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #060606;
+  border-bottom: 1px solid $primaryColor;
+
+  &:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: white;
+  }
+
+  &:visited {
+    color: white;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.navbar {
+  width: 100%;
+  height: $headerHeight;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include sr {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  @include sm {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  @include md {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+}
+
+.logo {
+  color: #fff;
+  text-transform: capitalize;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  margin: 1em;
+  display: flex;
+  align-items: center;
+
+  span {
+    color: $primaryColor;
+    font-size: 1.2em;
+  }
+
+  div {
+    color: #fff;
+    font-size: 1.2em;
+  }
+
+  &:link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: #1fbbff;
+  }
+
+  // @include tn {
+  //   display: none;
+  // }
+
+  @include sr {
+    font-size: 1.2em;
+    display: flex;
+  }
+}
+
+#menu {
+  width: 40px;
+  margin: 1em;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    filter: invert(1);
+    width: 100%;
+  }
+
+  @include sm {
+    display: none;
+  }
+
+  @include md {
+    display: none;
+  }
+}
+
+#menupage {
+
+  @include tn {
+    @include menu;
+  }
+
+  @include sr {
+    @include menu;
+  }
+
+  @include sm {
+    @include navbar;
+  }
+
+  @include md {
+    @include navbar;
+  }
+}
+
+.menu-off {
+  left: -140%;
+
+  @include tn {
+    left: -140%;
+  }
+
+  @include sm {
+    left: 0;
+  }
+}
+
+.menu-on {
+  left: 0;
+}
