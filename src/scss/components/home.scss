@@ -1,50 +1,20 @@
 #inicial {
     width: 100%;
     height: 100vh;
-    // background-image: linear-gradient(
-    //     rgba(#000000, 0.5),
-    //     rgba(#000000, 0.5),
-    //     rgba(#000000, 0.5)
-    //   ),
-    //   url("../img/background.jpg");
-    // background: linear-gradient(90deg, #060E2C, #1b488c);
-
-    // background: url("../img/image.png");
-    // background-blend-mode: ;
     background-position: center;
     background-repeat: repeat;
-    // filter: invert(1);
     background-size: 400px 400px, contain;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    // color: #0a0a0a;
-
-    @include tn {
-        // height: 100vh;
-        // // background: linear-gradient(#060e2c, #1b488c);
-        // background-attachment: inherit;
-        // background-size: cover;
-    }
-
-    @include sr {
-        // height: 100vh;
-        // // background: linear-gradient(to top, #060e2c, #1a26ad);
-        // background-attachment: scroll;
-        // background-size: cover;
-    }
 
     @include sm {
-        height: 100vh;
-        // background: linear-gradient(to top, #060e2c, #1a26ad);
         background-attachment: scroll;
         background-size: cover;
     }
 
     @include md {
-        height: 100vh;
-        // background: linear-gradient(to top, #060e2c, #1a26ad);
         background-attachment: scroll;
         background-size: cover;
     }
@@ -61,9 +31,7 @@
     @include tn {
         width: 100%;
         height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flexcenter;
         @include pad-g;
 
         div {
@@ -74,9 +42,7 @@
     @include sr {
         width: 100%;
         height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flexcenter;
         @include pad-g;
 
         div {
@@ -87,9 +53,7 @@
     @include sm {
         width: 100%;
         height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flexcenter;
         @include pad-g;
 
         div {
@@ -98,11 +62,7 @@
     }
 
     @include md {
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include center_column_align;
         @include pad-g;
 
         div {
@@ -111,11 +71,7 @@
     }
 
     @include lg {
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include center_column_align;
         @include pad-g;
 
         div {
@@ -126,9 +82,7 @@
     @include xl {
         width: 100%;
         height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include center_column_align;
         @include pad-g;
 
         div {
@@ -145,9 +99,7 @@
         height: 4em;
         // font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexcenter;
         flex-flow: row wrap;
         text-align: center;
 
@@ -163,9 +115,7 @@
 
     .hello {
         font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexcenter;
         flex-flow: row nowrap;
     }
 
@@ -183,9 +133,7 @@
 
     .main-buttons {
         height: 5em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexcenter;
 
         a {
             border: none;
@@ -197,6 +145,7 @@
             justify-content: space-evenly;
             align-items: center;
             text-transform: uppercase;
+            text-decoration: none;
             margin: 0 9px;
             font-family: 'Palanquin Dark', sans-serif;
 
@@ -204,9 +153,8 @@
                 background: $primaryColor;
                 padding: 10px;
                 border-radius: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexcenter;
+                cursor: pointer;
 
                 img {
                     width: 20px;
@@ -219,9 +167,7 @@
     .inicial-footer {
         width: 100%;
         height: 10vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include space_between;
 
         img {
             margin: 1em;
@@ -240,9 +186,7 @@
     .inicial-update {
         font-weight: 400;
         margin: 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include center_column_align;
         @include uppercase;
 
         .changed {
@@ -268,9 +212,7 @@
 }
 
 .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexcenter;
 
     img {
         width: 30px;

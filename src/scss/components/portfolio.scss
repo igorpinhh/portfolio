@@ -1,7 +1,6 @@
 .portfolio {
   width: 100%;
-  @include flexcenter;
-  flex-direction: column;
+  @include center_column_align;
 
   h3 {
     width: 100%;
@@ -29,8 +28,7 @@
 }
 
 .objects {
-  @include flexcenter;
-  flex-flow: wrap column;
+  @include center_column_align;
   width: 100%;
 
   @include lg {
@@ -41,8 +39,7 @@
 
   @include xl {
     width: 100%;
-    @include flexcenter;
-    flex-flow: row wrap;
+    @include center_column_align;
   }
 }
 
@@ -51,8 +48,7 @@
 }
 
 .show {
-  @include flexcenter;
-  flex-flow: column nowrap;
+  @include center_column_align;
   width: 100%;
   padding: 2px;
   margin: 20px;
