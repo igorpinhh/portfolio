@@ -1,0 +1,325 @@
+.about {
+  width: 100%;
+  // background: url('../images/timothee-duran-ilfsT5p_qvA-unsplash-compressed.jpg'), rgba( #000, 0.2);
+  // background: linear-gradient(90deg, #1a26ad, #03051b);
+  background: linear-gradient(to top, #060e2c, #050f79, #01063e);
+  background-blend-mode: overlay;
+  background-position: 100% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f1f1f1;
+  font-size: 3em;
+  padding: $aroundBoxSize 0 0 0;
+
+  @include tn {
+    // margin-top: 15em;
+    // background: black;
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+  }
+
+  @include sr {
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+
+.about_title {
+  // margin-top: $titleMargin;
+  // border: 1px solid red;
+  width: 100%;
+  @include full_center;
+
+  p {
+    @include title;
+  }
+}
+
+.about_body {
+  // padding: 0 5px;
+  // box-sizing: border-box;
+  @include full_center;
+  flex-direction: column;
+
+  @include tn {
+    flex-flow: wrap row;
+  }
+
+  @include sr {
+    flex-flow: wrap row;
+  }
+}
+
+.about_box {
+  // padding: $aroundBoxSize;
+  // box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+  img {
+    width: 30%;
+    border-radius: 5px;
+  }
+
+  p {
+    text-align: justify;
+    width: 40%;
+  }
+
+  @include tn {
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 100%;
+      margin: 10px 0;
+      @include pad-p;
+      // text-align: center;
+    }
+  }
+
+  @include sr {
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 80%;
+      padding: 5px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      // text-align: center;
+    }
+  }
+
+  @include sm {
+    width: 100%;
+    flex-flow: wrap row;
+
+    p {
+      width: 80%;
+      margin: 20px 0;
+      // padding: 0 25px;
+      box-sizing: border-box;
+      // text-align: center;
+    }
+  }
+
+  @include md {
+    width: 100%;
+
+    p {
+      width: 45%;
+      // text-align: center;
+    }
+  }
+}
+
+.university {
+  width: 100%;
+  margin: $titleMargin 0 0 0;
+
+  @include sr {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.university_title {
+  width: 100%;
+
+  h2 {
+    @include title;
+  }
+}
+
+.university__qualification {
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  img {
+    margin: 20px;
+    width: 35%;
+    border-radius: 5px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(
+      -61deg,
+      rgba(#ff4e06, 0) 35%,
+      rgba(#ff4e06, 1) 90%
+    );
+    border-image-slice: 1;
+    box-shadow: 15px 15px 5px 4px rgba(darken(#362243, 15), 0.7);
+  }
+
+  p {
+    width: 50%;
+    text-align: justify;
+  }
+
+  @include tn {
+    flex-direction: column-reverse;
+
+    p {
+      width: 100%;
+      padding: 0;
+    }
+
+    img {
+      width: 85%;
+      box-shadow: none;
+    }
+  }
+
+  @include sr {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      padding: 0;
+
+      @include pad-p;
+    }
+
+    img {
+      width: 65%;
+      box-shadow: none;
+    }
+  }
+
+  @include sm {
+    flex-direction: column;
+
+    p {
+      width: 80%;
+      @include pad-p;
+    }
+
+    img {
+      width: 40%;
+      box-shadow: none;
+    }
+  }
+}
+
+.about_tecnologies {
+  margin-top: $titleMargin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include tn {
+    padding: 3px;
+    box-sizing: border-box;
+  }
+}
+
+.tecnologies_title {
+  width: 100%;
+  // height: $titleSize;
+  @include full_center;
+
+  h1 {
+    // @include full_center;
+
+    @include title;
+    border: 1px solid red;
+  }
+
+  @include tn {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+.tecnologies_used {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: wrap row;
+
+  @include tn {
+    flex-direction: column;
+  }
+
+  @include sr {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include sm {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.tec_item {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+  // padding: 0 1.2em;
+  box-sizing: border-box;
+
+  @include tn {
+    width: 100%;
+    // padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  @include sr {
+    width: 80%;
+    @include pad-p;
+  }
+
+  @include sm {
+    width: 80%;
+    @include pad-p;
+  }
+}
+
+.item__area {
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 20px;
+  }
+}
+
+.icon_title {
+  margin-right: 7px;
+  font-size: 60px;
+  width: 35px;
+  height: 35px;
+  filter: invert(100%);
+}
+
+.reference {
+  font-size: 12px;
+}

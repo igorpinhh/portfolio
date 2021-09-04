@@ -1,0 +1,102 @@
+@mixin full-size {
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin space_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin uppercase {
+    text-transform: uppercase;
+}
+
+@mixin center_column_align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin title {
+    width: 100%;
+    height: 10vh;
+    font-size: 2em;
+    @include full_center;
+    flex-direction: row-reverse;
+    padding: 5px;
+    box-sizing: border-box;
+    img {
+        margin: 10px;
+        width: 35px;
+    }
+}
+
+// tiny devices
+@mixin tn {
+    @media (max-width: #{$screen-tn-min}) {
+        // border: 1px solid red;
+        @content;
+    }
+}
+
+// smaller devices
+@mixin sr {
+    @media (min-width: #{$screen-tn-min}) and (max-width: #{$screen-smr-min}) {
+        // border: 1px solid #E5FF2C;
+        @content;
+    }
+}
+
+// small devices
+@mixin sm {
+    @media (min-width: #{$screen-smr-min}) and (max-width: #{$screen-md-min}) {
+        // border: 1px solid royalblue;
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) {
+        @content;
+        // border: 1px solid greenyellow;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// tn = red
+// sr = orangered
+// sm = royalblue
+// md = greenyellow
+
+@mixin pad-p {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+@mixin pad-g {
+    padding: 10px;
+    box-sizing: border-box;
+}
