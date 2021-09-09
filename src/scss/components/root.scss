@@ -5,9 +5,7 @@ html {
 .flex_container {
   width: 100%;
   color: $secondaryColor;
-  font-family: 'Poppins', sans-serif;
-  background-color: #000000;
-  z-index: 1; 
+  font-family: 'Poppins', sans-serif; 
   background-image: url("../img/image.png");
   background-size: 400px 400px, contain;
   @include center_column_align;

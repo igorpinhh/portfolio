@@ -100,7 +100,6 @@
         // font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
         @include flexcenter;
-        flex-flow: row wrap;
         text-align: center;
 
         div,
@@ -116,7 +115,6 @@
     .hello {
         font-size: 18px;
         @include flexcenter;
-        flex-flow: row nowrap;
     }
 
     .home-resume {
@@ -142,7 +140,7 @@
             box-sizing: border-box;
             border-radius: 100%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             text-transform: uppercase;
             text-decoration: none;

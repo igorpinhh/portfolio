@@ -1,8 +1,9 @@
 const menu = document.getElementById('menu');
 const menupage = document.querySelector('#menupage');
 const links = document.querySelectorAll('.item__link');
-const Ffruit = document.querySelector('#paginas');
-const Fcolor = document.querySelector('#projetos');
+const Fpages = document.querySelector('#paginas');
+const Lpage = document.querySelector('#Lpage');
+const projetos = document.querySelector('#projetos');
 
 const toggleClass = (elem, oldC, newC) => {
     elem.classList.toggle(newC);
@@ -54,10 +55,23 @@ function removeClass(element, name) {
     element.className = arr1.join(' ');
 }
 
-Ffruit.addEventListener('click', () => {
+Fpages.addEventListener('click', () => {
     filterObjects('paginas');
 });
 
-Fcolor.addEventListener('click', () => {
+Lpage.addEventListener('click', () => {
+    filterObjects('Lpage');
+});
+
+projetos.addEventListener('click', () => {
     filterObjects('projetos');
+});
+
+const projectItem = document.querySelectorAll('.item');
+
+projectItem.forEach(item => {
+    item.addEventListener('click', ()=> {
+        // alert('ola')
+        item.classList.toggle('open')
+    })
 });
