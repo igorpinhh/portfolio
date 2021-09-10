@@ -619,6 +619,7 @@ header a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 5em;
 }
 
 .portfolio h3 {
@@ -639,10 +640,12 @@ header a {
 
 #buttons button {
   color: #fff;
-  border: 1px solid #2890FF;
-  background-color: transparent;
+  background-color: #2890FF;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
   text-transform: uppercase;
-  margin: 0 6px;
+  margin: 10px;
   padding: 9px 25px;
   font-size: 13px;
 }
@@ -670,7 +673,8 @@ header a {
 
 .item {
   display: none;
-  margin: 0 20px;
+  margin: 0 10px;
+  transition: all 90ms ease-in-out;
 }
 
 .item span {

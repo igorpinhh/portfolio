@@ -75,3 +75,20 @@ projectItem.forEach(item => {
         item.classList.toggle('open')
     })
 });
+
+const item = document.querySelectorAll('.item');
+
+
+item.forEach(item => {
+    item.addEventListener('mouseenter', ()=> {
+        console.log(1);
+        item.style.zIndex = 92;
+        item.style.transform = "scale(1.03)";
+    });
+    
+    item.addEventListener('mouseleave', ()=> {
+        // console.log(2);
+        item.style.zIndex = 0
+        item.style.transform = "scale(1)";
+    });
+});
